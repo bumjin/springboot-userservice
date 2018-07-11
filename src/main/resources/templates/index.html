@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Hello
+<form th:action="insert" th:method="post">
+    이름: <input type="text" name="name">
+    <button type="submit">전송</button>
+
+</form>
+<div th:each="user : ${users}">
+    아이디: <span th:text="${user.id}"></span><br>
+    이름:<span th:text="${user.name}"></span><br>
+    <hr>
+</div>
+</body>
+</html>
